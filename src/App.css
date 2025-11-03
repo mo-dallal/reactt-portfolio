@@ -499,3 +499,72 @@ body {
     height: 120px;
   }
 }
+/* Main Content Layout */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* ارتفاع الـ Navbar */
+}
+
+.page-content {
+  min-height: calc(100vh - 80px - 400px); /* ارتفاع الصفحة - Navbar - Footer */
+}
+
+/* تحديث أنماط Navbar للروابط */
+.nav-links a {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #1abc9c;
+}
+
+.nav-links a.active-link {
+  color: #1abc9c;
+}
+
+/* تحديث الـ logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: #1abc9c;
+}
+
+/* Mobile Menu Links */
+@media (max-width: 768px) {
+  .nav-links a {
+    padding: 1rem 2rem;
+    text-align: left;
+    display: block;
+  }
+}
+
+/* إزالة padding-top من Hero لأن الـ main-content فيه padding */
+.hero {
+  background-color: #1abc9c;
+  color: white;
+  padding: 100px 20px; /* تم تقليل padding-top */
+  text-align: center;
+}
